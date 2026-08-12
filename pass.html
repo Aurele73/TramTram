@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titre de Transport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stage">
+    <div class="phone" id="phone">
+
+      <div class="statusbar">
+        <span id="clock">18:36</span>
+        <div class="icons">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l6 4.5-6 4.5V2z"/><path d="M12 11l6 4.5-6 4.5V11z"/><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+          <span style="font-size:13px;font-weight:600;">5G</span>
+          <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><rect x="0" y="7" width="3" height="5" rx=".5" fill="#fff"/><rect x="4.5" y="5" width="3" height="7" rx=".5" fill="#fff"/><rect x="9" y="3" width="3" height="9" rx=".5" fill="#fff"/><rect x="13.5" y="0" width="3" height="12" rx=".5" fill="#fff"/></svg>
+          <span class="battery-pct">44</span>
+          <svg width="23" height="12" viewBox="0 0 23 12" aria-hidden="true"><rect x="0.5" y="0.5" width="19" height="11" rx="2.5" stroke="#fff" fill="none"/><rect x="2" y="2" width="7.5" height="8" rx="1" fill="#fff"/><rect x="20.5" y="4" width="2" height="4" rx="1" fill="#fff"/></svg>
+        </div>
+      </div>
+
+      <div class="app-header">
+        <a class="back-btn" href="index.html" aria-label="Retour à l&rsquo;accueil">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+        </a>
+      </div>
+
+      <div class="app-body">
+        <div class="avatar-wrap">
+          <div class="avatar-ring">
+            <div class="avatar-circle" role="img" aria-label="Photo du voyageur non renseignée">
+              <svg class="avatar-glyph" viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="36" r="18"/>
+                <path d="M14 100c0-26 16-42 36-42s36 16 36 42z"/>
+              </svg>
+            </div>
+            <div class="avatar-orbit" id="dotsOrbit">
+              <span class="avatar-dot dot-green top"></span>
+              <span class="avatar-dot dot-blue bottom"></span>
+            </div>
+          </div>
+          <p class="traveler-name">Aurele Dunand</p>
+        </div>
+
+        <div class="validity-track"><div class="validity-fill" id="validityFill"></div></div>
+        <p class="validity-text" id="validityText">Correspondance autorisée encore 59 minutes</p>
+
+        <div class="card">
+          <div class="card-top">
+            <div>
+              <div class="card-title">10 voyages</div>
+              <div class="card-subtitle">M réso</div>
+            </div>
+            <button class="bookmark-btn" type="button" id="bookmarkBtn" aria-pressed="false" aria-label="Enregistrer ce titre">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+            </button>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="field-label">Période de validité</p>
+          <p class="field-value" id="periodValue">
+            <span>27/07/26</span><span class="sep">18:36</span>
+            <span class="arrow">→</span>
+            <span>27/07/26</span><span class="sep">19:36</span>
+          </p>
+
+          <p class="field-label">Dernière validation</p>
+          <p class="field-value" id="lastValidation" style="margin-bottom:20px;">
+            <span>27/07/26</span><span class="sep">18:36</span>
+          </p>
+
+          <button class="btn btn-purple" type="button" id="correspondanceBtn">VALIDER UNE CORRESPONDANCE</button>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-purple" type="button" id="qrBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3z"/><path d="M20 14v3"/><path d="M14 20h3"/><path d="M20 20h.01"/></svg>
+            AFFICHER MON CODE DE CONTRÔLE
+          </button>
+          <button class="btn btn-ghost" type="button" id="parkingBtn">
+            <span class="parking-icon">P+R</span>
+            ENTRER OU SORTIR D&rsquo;UN PARKING-RELAIS
+          </button>
+        </div>
+      </div>
+
+      <div class="navbar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17 4L7 12l10 8V4z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/></svg>
+      </div>
+    </div>
+
+    <p class="stage-caption">Recréation d&rsquo;interface &mdash; titre de transport</p>
+  </div>
+
+  <div class="qr-overlay" id="qrOverlay">
+    <div class="qr-card">
+      <h2>Code de contrôle</h2>
+      <p>Présentez cet écran à l&rsquo;agent de contrôle</p>
+      <div class="qr-grid" id="qrGrid" aria-hidden="true"></div>
+      <button class="qr-close" type="button" id="qrClose">FERMER</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
