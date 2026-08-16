@@ -57,13 +57,6 @@ parkingBtn.addEventListener('click', () => {
   setTimeout(() => { parkingBtn.style.boxShadow = ''; }, 300);
 });
 
-const clockEl = document.getElementById('clock');
-function tickClock(){
-  clockEl.textContent = formatNow().time;
-}
-tickClock();
-setInterval(tickClock, 15000);
-
 setInterval(() => {
   if (minutesLeft > 0){
     minutesLeft -= 1;
