@@ -94,3 +94,13 @@ function releaseOrbit(){
 }
 document.addEventListener('pointerup', releaseOrbit);
 document.addEventListener('pointercancel', releaseOrbit);
+
+// Rotation pilotée en temps réel (plutôt qu'une animation CSS) pour une vitesse
+// identique sur tous les appareils, quel que soit leur taux de rafraîchissement.
+const ORBIT_DURATION = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 3000 : 2000;
+function spinOrbit(now){
+  const angle = ((now % ORBIT_DURATION) / ORBIT_DURATION) * 360;
+  dotsOrbit.style.transform = `rotate(${angle}deg)`;
+  requestAnimationFrame(spinOrbit);
+}
+requestAnimationFrame(spinOrbit);

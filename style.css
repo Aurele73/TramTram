@@ -112,17 +112,12 @@ body{
 .avatar-orbit{
   position:absolute;
   inset:0;
-  animation: avatar-orbit-spin 2s linear infinite;
 }
 .avatar-orbit.dragging{
   position:fixed;
   inset:auto;
   pointer-events:none;
   z-index:60;
-}
-@keyframes avatar-orbit-spin{
-  from{ transform:rotate(0deg); }
-  to{ transform:rotate(360deg); }
 }
 .avatar-dot{
   position:absolute;
@@ -438,5 +433,4 @@ body{
 
 @media (prefers-reduced-motion: reduce){
   *{ transition-duration:.001ms !important; animation-duration:.001ms !important; }
-  .avatar-orbit{ animation-duration:3s !important; }
 }
