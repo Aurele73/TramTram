@@ -52,6 +52,7 @@ body{
 /* ---------- Phone shell (fixed light UI, like a real screenshot) ---------- */
 .phone{
   width:min(390px, 92vw);
+  min-height:844px;
   border-radius:36px;
   overflow:hidden;
   background:#eeeeee;
@@ -129,6 +130,12 @@ body{
   width:100%;
   height:100%;
   fill:#f4f4f6;
+}
+.avatar-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 .avatar-orbit{
   position:absolute;
