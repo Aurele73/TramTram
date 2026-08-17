@@ -53,6 +53,32 @@ body{
   flex-direction:column;
 }
 
+/* Sur téléphone, la page occupe tout l'écran (sans marge, sans coins arrondis, sans scroll),
+   que le plein écran navigateur (masquage de la barre d'adresse) aboutisse ou non : on ne peut
+   pas compter sur l'API Fullscreen, dont le succès varie selon les appareils/navigateurs. */
+@media (max-width: 480px){
+  html, body{
+    height:100%;
+    overflow:hidden;
+    overscroll-behavior:none;
+  }
+  body{
+    padding:0;
+    min-height:100dvh;
+  }
+  .stage{
+    gap:0;
+    height:100%;
+  }
+  .phone{
+    width:100vw;
+    height:100dvh;
+    min-height:100dvh;
+    border-radius:0;
+    box-shadow:none;
+  }
+}
+
 /* App header */
 .app-header{
   background:#eeeeee;
