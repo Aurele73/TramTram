@@ -76,8 +76,11 @@ if (qrDots){
 const dotsOrbit = document.getElementById('dotsOrbit');
 const ORBIT_DIAMETER = 150; // même diamètre que .avatar-ring
 
+let orbitFast = false;
+
 document.addEventListener('pointerdown', (e) => {
   if (e.target.closest('button, a')) return;
+  orbitFast = true;
   dotsOrbit.classList.add('dragging');
   dotsOrbit.style.left = `${e.clientX - ORBIT_DIAMETER / 2}px`;
   dotsOrbit.style.top = `${e.clientY - ORBIT_DIAMETER / 2}px`;
@@ -86,6 +89,7 @@ document.addEventListener('pointerdown', (e) => {
 });
 
 function releaseOrbit(){
+  orbitFast = false;
   dotsOrbit.classList.remove('dragging');
   dotsOrbit.style.left = '';
   dotsOrbit.style.top = '';
@@ -97,10 +101,17 @@ document.addEventListener('pointercancel', releaseOrbit);
 
 // Rotation pilotée en temps réel (plutôt qu'une animation CSS) pour une vitesse
 // identique sur tous les appareils, quel que soit leur taux de rafraîchissement.
-const ORBIT_DURATION = 3000;
+const ORBIT_DURATION = 5000;
+const ORBIT_DURATION_FAST = 3000;
+let orbitAngle = 0;
+let orbitLastTime = null;
 function spinOrbit(now){
-  const angle = ((now % ORBIT_DURATION) / ORBIT_DURATION) * 360;
-  dotsOrbit.style.transform = `rotate(${angle}deg)`;
+  if (orbitLastTime === null) orbitLastTime = now;
+  const dt = now - orbitLastTime;
+  orbitLastTime = now;
+  const duration = orbitFast ? ORBIT_DURATION_FAST : ORBIT_DURATION;
+  orbitAngle = (orbitAngle + (dt / duration) * 360) % 360;
+  dotsOrbit.style.transform = `rotate(${orbitAngle}deg)`;
   requestAnimationFrame(spinOrbit);
 }
 requestAnimationFrame(spinOrbit);

@@ -122,14 +122,14 @@ body{
 .avatar-dot{
   position:absolute;
   left:50%;
-  width:13px; height:13px;
+  width:26px; height:26px;
   border-radius:50%;
   transform:translateX(-50%);
 }
-.avatar-dot.top{ top:-6px; }
-.avatar-dot.bottom{ bottom:-6px; }
-.avatar-dot.dot-green{ background:#3fb950; }
-.avatar-dot.dot-blue{ background:#2f80ed; }
+.avatar-dot.top{ top:-13px; }
+.avatar-dot.bottom{ bottom:-13px; }
+.avatar-dot.dot-green{ background:#000; }
+.avatar-dot.dot-blue{ background:#000; }
 
 .traveler-name{
   margin:14px 0 0;
