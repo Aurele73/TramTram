@@ -39,13 +39,13 @@ periodValue.innerHTML = `
 `;
 lastValidation.innerHTML = `<span>${start.date}</span><span class="sep">${start.time}</span>`;
 validityText.textContent = `Correspondance autorisée encore ${minutesLeft} minutes`;
-validityFill.style.width = '100%';
+validityFill.style.width = '2%';
 
 correspondanceBtn.addEventListener('click', () => {
   const now = formatNow();
   lastValidation.innerHTML = `<span>${now.date}</span><span class="sep">${now.time}</span>`;
   minutesLeft = 60;
-  validityFill.style.width = '100%';
+  validityFill.style.width = '2%';
   validityText.textContent = `Correspondance autorisée encore ${minutesLeft} minutes`;
   correspondanceBtn.textContent = 'CORRESPONDANCE VALIDÉE';
   setTimeout(() => { correspondanceBtn.textContent = 'VALIDER UNE CORRESPONDANCE'; }, 1600);
@@ -61,7 +61,7 @@ setInterval(() => {
   if (minutesLeft > 0){
     minutesLeft -= 1;
     validityText.textContent = `Correspondance autorisée encore ${minutesLeft} minutes`;
-    validityFill.style.width = Math.max(2, (minutesLeft/60)*100) + '%';
+    validityFill.style.width = Math.min(100, ((60 - minutesLeft) / 60) * 100) + '%';
   }
 }, 60000);
 
