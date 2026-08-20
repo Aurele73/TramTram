@@ -150,6 +150,7 @@ body{
   left:50%;
   width:26px; height:26px;
   border-radius:50%;
+  border:1px solid #fff;
   transform:translateX(-50%);
 }
 .avatar-dot.top{ top:-13px; }
@@ -182,7 +183,7 @@ body{
 .validity-text{
   color:#4caf50;
   font-size:15px;
-  font-weight:500;
+  font-weight:400;
   margin:0 0 18px;
 }
 
@@ -222,9 +223,22 @@ body{
 .bookmark-btn:focus-visible{ outline:2px solid #7c4ea3; outline-offset:2px; }
 
 .divider{
+  position:relative;
   height:1px;
   background:#ececef;
   margin:14px 0 16px;
+}
+.divider::after{
+  content:'';
+  position:absolute;
+  top:50%;
+  right:-35px;
+  transform:translateY(-50%);
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:#eeeeee;
+  box-shadow: inset 2px 0 4px rgba(20,20,30,.08);
 }
 
 .field-label{
@@ -250,7 +264,7 @@ body{
   cursor:pointer;
   font-family:inherit;
   font-size:14.5px;
-  font-weight:700;
+  font-weight:600;
   letter-spacing:.02em;
   border-radius:999px;
   padding:15px 18px;
@@ -290,11 +304,17 @@ body{
   border-radius:6px;
   background:#3457a6;
   color:#fff;
-  font-size:9.5px;
+  font-size:16px;
   font-weight:800;
   display:flex; align-items:center; justify-content:center;
   letter-spacing:0;
   flex:none;
+}
+.parking-icon-r{
+  font-size:7.5px;
+  font-weight:700;
+  align-self:flex-end;
+  margin-bottom:2px;
 }
 
 /* ---------- Home screen ---------- */
