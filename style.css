@@ -410,6 +410,9 @@ body{
 .home-actions{
   margin-top:auto;
   padding-top:8px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
 }
 .home-actions a.btn{
   text-decoration:none;
@@ -476,6 +479,193 @@ body{
   width:100%;
 }
 .qr-close:hover{ background:#e8e8ec; }
+
+/* ---------- Messages (conversation SMS) ---------- */
+.msg-header{
+  background:#141416;
+  padding:14px 16px 14px 10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:none;
+  overflow:hidden;
+}
+.msg-back{
+  width:34px; height:34px;
+  display:flex; align-items:center; justify-content:center;
+  background:none; border:none; padding:0; cursor:pointer;
+  color:#e8e8ec;
+  text-decoration:none;
+  border-radius:50%;
+  flex:none;
+}
+.msg-back:hover{ background:rgba(255,255,255,.08); }
+.msg-back:focus-visible{ outline:2px solid #c8bdf2; outline-offset:2px; }
+.msg-avatar{
+  width:38px; height:38px;
+  border-radius:50%;
+  background:#f0964a;
+  color:#472807;
+  display:flex; align-items:center; justify-content:center;
+  flex:none;
+}
+.msg-contact{
+  font-size:19px;
+  font-weight:500;
+  color:#f2f2f5;
+  flex:1;
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.msg-header-actions{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  color:#cfcfd6;
+  flex:none;
+}
+
+.msg-list{
+  flex:1;
+  min-height:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  background:#0e0e10;
+  padding:16px 14px 10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.msg-row.received{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:4px;
+}
+.msg-row.sent{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.msg-card{
+  max-width:86%;
+  background:#2a2a2e;
+  border-radius:16px;
+  overflow:hidden;
+}
+.msg-card-text{
+  padding:12px 14px 14px;
+  color:#eceef2;
+  font-size:14px;
+  line-height:1.55;
+}
+.msg-u{ text-decoration:underline; text-underline-offset:2px; }
+.msg-card-link{
+  background:#0e2c46;
+  padding:12px 14px;
+}
+.msg-card-link p{
+  margin:0 0 6px;
+  color:#dce8f5;
+  font-size:14.5px;
+  font-weight:600;
+}
+.msg-card-link-row{
+  display:flex; align-items:center; gap:8px;
+  color:#9db6cc;
+  font-size:12.5px;
+}
+.msg-card-logo{
+  width:16px; height:16px;
+  border-radius:50%;
+  background:#2fb4c7;
+  flex:none;
+}
+
+.msg-divider{
+  align-self:center;
+  color:#8b8d97;
+  font-size:12.5px;
+  margin:6px 0;
+}
+
+.msg-bubble-sent{
+  background:#c8bdf2;
+  color:#241b3d;
+  border-radius:16px;
+  padding:9px 16px;
+  font-size:14px;
+  font-weight:500;
+  max-width:70%;
+}
+
+.msg-time{
+  color:#8b8d97;
+  font-size:11.5px;
+  padding-left:2px;
+}
+
+.msg-composer{
+  flex:none;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px 18px;
+  background:#0e0e10;
+}
+.msg-add{
+  width:34px; height:34px;
+  border-radius:50%;
+  border:none;
+  background:#232326;
+  color:#cfcfd6;
+  font-size:20px;
+  line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  flex:none;
+}
+.msg-pill{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#232326;
+  border-radius:999px;
+  padding:10px 8px 10px 16px;
+  gap:8px;
+  min-width:0;
+}
+.msg-input{
+  color:#e8e8ec;
+  font-size:14.5px;
+  flex:1;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.msg-emoji{
+  width:26px; height:26px;
+  border:none; background:none;
+  color:#9a9aa2;
+  display:flex; align-items:center; justify-content:center;
+  flex:none;
+}
+.msg-send{
+  width:52px; height:52px;
+  border-radius:50%;
+  border:none;
+  background:#c8bdf2;
+  color:#241b3d;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:1px;
+  flex:none;
+  transition: transform .15s ease;
+}
+.msg-send span{ font-size:9px; font-weight:700; letter-spacing:.02em; }
+.msg-send.sending{ transform:scale(.92); }
 
 @media (prefers-reduced-motion: reduce){
   *{ transition-duration:.001ms !important; animation-duration:.001ms !important; }

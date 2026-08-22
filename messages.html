@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0c0e">
+  <title>Messages</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stage">
+    <div class="phone">
+
+      <div class="msg-header">
+        <a class="msg-back" href="index.html" aria-label="Retour à l&rsquo;accueil">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+        </a>
+        <div class="msg-avatar" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg>
+        </div>
+        <span class="msg-contact">93900</span>
+        <span class="msg-header-actions">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg>
+        </span>
+      </div>
+
+      <div class="msg-list" id="msgList">
+        <div class="msg-row received">
+          <div class="msg-card">
+            <div class="msg-card-text">
+              M&rsquo;RESO INTRA VOIRONNAIS<br>
+              TICKET 1HEURE<br>
+              &nbsp;CORRESPONDANCE CARS REGION<br>
+              <span class="msg-u">0768401173AAOW</span><br>
+              Prix 1.20 Date <span class="msg-u">12.08.26 début 16:59</span> Fin <span class="msg-u">17:59</span><br><br>
+              <span class="msg-u">bit.ly/2AcdfcU</span>
+            </div>
+            <div class="msg-card-link">
+              <p>Un tarif pour chacun</p>
+              <div class="msg-card-link-row">
+                <span class="msg-card-logo" aria-hidden="true"></span>
+                <span>www.reso-m.fr</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="msg-divider">mercredi &bull; 08:11</div>
+
+        <div class="msg-row sent">
+          <div class="msg-bubble-sent">1h</div>
+        </div>
+
+        <div class="msg-row received">
+          <div class="msg-card">
+            <div class="msg-card-text">
+              M&rsquo;RESO INTRA VOIRONNAIS<br>
+              TICKET 1HEURE<br>
+              &nbsp;CORRESPONDANCE CARS REGION<br>
+              <span class="msg-u">0768401173JW2N</span><br>
+              Prix 1.20 Date <span class="msg-u">19.08.26 début 08:11</span> Fin <span class="msg-u">09:11</span><br><br>
+              <span class="msg-u">bit.ly/2AcdfcU</span>
+            </div>
+            <div class="msg-card-link">
+              <p>Un tarif pour chacun</p>
+              <div class="msg-card-link-row">
+                <span class="msg-card-logo" aria-hidden="true"></span>
+                <span>www.reso-m.fr</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg-time">08:11</div>
+        </div>
+      </div>
+
+      <div class="msg-composer">
+        <button class="msg-add" type="button" tabindex="-1" aria-hidden="true">+</button>
+        <div class="msg-pill">
+          <div class="msg-input" id="msgInput">1h</div>
+          <button class="msg-emoji" type="button" tabindex="-1" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg>
+          </button>
+        </div>
+        <button class="msg-send" type="button" id="msgSend" tabindex="-1" aria-hidden="true">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l18-8-8 18-2.5-7.5L3 11z"/></svg>
+          <span>SMS</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="fullscreen.js"></script>
+  <script src="messages.js"></script>
+</body>
+</html>
